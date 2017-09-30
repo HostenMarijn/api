@@ -1,0 +1,33 @@
+<div ng-include="'views/public/pages/components/header.html'"></div>
+
+<div class="content">
+  <div class="row">
+    <div class="large-8 columns">
+      <h3>Bears overview</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-8 columns">
+
+      <ul>
+        <li ng-repeat="b in bears">
+          <a ng-href="/bears/{{b.id}}">{{b.name}} - {{b.home}}</a>
+          <button class="button alert" ng-click="deleteBear(b)">Delete</button>
+        </li>
+      </ul>
+
+    </div>
+
+    <div ng-controller="create_controller" class="large-4 columns">
+      <form ng-submit="createBear()">
+        <label for="name">Name</label>
+        <input id="name" type="text" ng-model="newBear.name">
+        <label for="home">Home:</label>
+        <input id="home" type="text" ng-model="newBear.home">
+        <input class="button" type="submit" value="Save">
+      </form>
+
+    </div>
+  </div>
+</div>
