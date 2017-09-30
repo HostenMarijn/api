@@ -1,6 +1,4 @@
 .idea
-vendor/
-composer.phar
 composer.lock
 frontend/node_modules/
 
