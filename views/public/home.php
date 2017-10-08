@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html class="no-js" ng-app="app">
 <head>
     <meta charset="utf-8">
     <base href="/">
@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="views/public/libs/fontawesome/font-awesome.min.css"> <!-- font-awesome css -->
     <link rel="stylesheet" href="views/public/libs/foundation/foundation.min.css"> <!-- foundation css -->
+    <!--<link rel="stylesheet" href="views/public/css/reset.css">--> <!-- eigen stijlen -->
     <link rel="stylesheet" href="views/public/css/style.min.css"> <!-- eigen stijlen -->
 </head>
 <body>

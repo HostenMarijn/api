@@ -1,7 +1,7 @@
 (function(){
   "use strict";
 
-  var listpage_controller = function($scope, bear_service) {
+  var listpage_controller = function($scope, bear_service, cms_service) {
 
 
     $scope.bears = [];
@@ -24,7 +24,14 @@
       });
     };
 
+    cms_service.getContentForPage(1).then(function(response) {
+      
+      $.each(response, function(i, content) {
+        $('[data-t-id="' + content.id  +'"]').html(content.text);
+      });
+    });
+
   };
 
-  angular.module("app").controller("listpage_controller", ["$scope", "bear_service", listpage_controller]);
+  angular.module("app").controller("listpage_controller", ["$scope", "bear_service", "cms_service", listpage_controller]);
 })();

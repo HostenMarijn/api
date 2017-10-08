@@ -1,1 +1,51 @@
-<h1>Welcome to the CMS!</h1>
+<div class="cms-content">
+  <h1>Welcome to the CMS!</h1>
+
+  <h3>Page content for Home:</h3>
+
+  <div class="grid-x">
+    <div class="cell medium-10">
+      <h4>text</h4>
+    </div>
+    <div class="cell medium-2">
+      <h4>action</h4>
+    </div>
+  </div>
+
+  <div class="grid-x" ng-repeat="h in homeTexts">
+    <div class="medium-10 cell">
+      <p ng-hide="showInput">{{h.text}}</p>
+      <input ng-model="h.text" ng-show="showInput" type="text" name="" value="{{h.text}}">
+    </div>
+
+    <div ng-click="showInput = !showInput" class="medium-2 cell">
+      <input ng-hide="showInput" class="button" type="button" name="" value="Edit">
+      <input ng-click="saveText(h)" ng-show="showInput" class="button" type="button" name="" value="Save">
+    </div>
+  </div>
+
+
+  <h3>Page content for Detail:</h3>
+
+  <div class="grid-x">
+    <div class="cell medium-10">
+      <h4>text</h4>
+    </div>
+    <div class="cell medium-2">
+      <h4>action</h4>
+    </div>
+  </div>
+
+  <div class="grid-x" ng-repeat="d in detailTexts">
+    <div class="medium-10 cell">
+      <p ng-hide="showInput">{{d.text}}</p>
+      <input ng-model="d.text" ng-show="showInput" type="text" name="" value="{{d.text}}">
+    </div>
+
+    <div ng-click="showInput = !showInput" class="medium-2 cell">
+      <input ng-hide="showInput" class="button" type="button" name="" value="Edit">
+      <input ng-click="saveText(d)" ng-show="showInput" class="button" type="button" name="" value="Save">
+    </div>
+  </div>
+
+</div>
